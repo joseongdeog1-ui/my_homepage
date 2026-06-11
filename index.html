@@ -1,0 +1,41 @@
+// index.html 수정 코드
+const htmlContent = `
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body.light { background: #fff; color: #000; }
+        body.black { background: #000; color: #fff; }
+        body { transition: 0.3s; padding: 20px; font-family: sans-serif; }
+        nav { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        nav a { margin-right: 15px; cursor: pointer; text-decoration: underline; }
+    </style>
+</head>
+<body class="light">
+    <nav>
+        <span>메뉴:</span>
+        <a onclick="alert('프로젝트 섹션으로 이동')">프로젝트</a>
+        <a onclick="alert('포트폴리오 섹션으로 이동')">포트폴리오</a>
+        <a onclick="alert('블로그 섹션으로 이동')">블로그</a>
+        <button onclick="toggleTheme()">테마 변경</button>
+    </nav>
+    
+    <h1>NOVA J의 블로그</h1>
+    <section>
+        <h2>현재 프로젝트</h2>
+        <p>KARUMA, Cinematic Relay Studio 등 AI 기반 프로젝트 진행 중</p>
+    </section>
+    <section>
+        <h2>포트폴리오</h2>
+        <p>디지털 마케팅 및 AI 미디어 콘텐츠 제작</p>
+    </section>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light');
+            document.body.classList.toggle('black');
+        }
+    </script>
+</body>
+</html>
+`;
